@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Edit Profile </title>
+</head>
+
+<body>
+    <table border="0" width="85%">
+        <tbody>
+            <tr valign="top">
+                <!-- First Column -->
+                <td>
+                    <ul>
+                        <li><a href="../account-nav.html">Account</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="../home.html">Courses</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Studio</a></li>
+                        <li><a href="#">Commons</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </td>
+                <!-- Second Column -->
+                <td>
+                    <ul>
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="./index.html">Profile</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">ePortfolios</a></li>
+                        <li><a href="#">Shared Content</a></li>
+                        <li><a href="#">The Hub</a></li>
+                        <li><a href="#">Qwickly Course Tools</a></li>
+                        <li><a href="#">Global Announcements</a></li>
+                    </ul>
+                </td>
+                <!-- Third Column -->
+                <td>
+                    <form action="./index.html" id="edit-profile">
+                        <div>
+                            <h1>Steven Ngo</h1>
+                            <label for="edit-name">Name:* </label>
+                            <input type="text" name="name" id="edit-name" value="Steven Ngo">
+                            <label for="edit-pronouns">Pronouns: </label>
+                            <select name="edit-pronouns" id="edit-pronouns">
+                                <option value="None" selected>None</option>
+                            </select>
+                            <br>
+                            <label for="edit-title">Title: </label>
+                            <input type="text" name="edit-title" id="edit-title">
+                        </div>
+                        <div>
+                            <h2>Contact</h2>
+                            No registered services, you can add some on the <a href="#">settings</a> page.
+                        </div>
+                        <div>
+                            <h2>Biography</h2>
+                            <textarea name="edit-bio" id="edit-bio" cols="50"
+                                rows="4">CS @ Northeastern | Seeking SWE Internship for Winter/Spring 2024</textarea>
+                        </div>
+                        <div>
+                            <h2>Links</h2>
+                            <ul>
+                                <li><a
+                                        href="https://www.linkedin.com/in/stevenxngo/">LinkedIn</a> Links to an
+                                    external site.
+                                </li>
+                            </ul>
+                        </div>
+                        <table border="0">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Title
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        URL
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="url-title"
+                                            id="url-title" value="LinkedIn">
+                                    </td>
+                                    <td>&rarr;</td>
+                                    <td><input type="text" name="url-link" id="url-link"
+                                            value="https://www.linkedin.com/in/stevenxngo/"></td>
+                                    <td><a href="#">Remove</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <button type="button">Add another link</button>
+                            <br>
+                            <button type="button">Cancel</button>
+                            <button>Save Profile</button>
+                            <br>
+                            <button type="button">Edit Profile</button>
+                            <button>Cancel Editing</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
