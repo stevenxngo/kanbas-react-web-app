@@ -1,0 +1,71 @@
+.main-navbar {
+    width: 85px;
+    min-height: max(100vh, 100%);
+    color: black;
+}
+
+#sidebar-wrapper {
+    position: fixed;
+} 
+
+#page-content-wrapper {
+    min-width: 100vw;
+    margin-top: 25px;
+    margin-left: 85px;
+    margin-bottom: 25px;
+}
+
+.main-navbar ul {
+    max-width: 100%;
+}
+
+.main-navbar ul li {
+    max-width: 100%;
+}
+
+.main-navbar-item-text {
+    font-size: 0.8em;
+    color: white
+}
+
+.nav-link {
+    color: white;
+    max-width: 100%;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    background-color: white;
+    color: red;
+    border-radius: 0;
+}
+
+.nav-link.active .main-navbar-item-text {
+    color: red;
+}
+
+.navbar-icon {
+    color: red;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.account-icon {
+    color: white;
+}
+
+.nav-link.active .account-icon {
+    color: black;
+}
+
+.nav-link:visited {
+    color: white;
+}
