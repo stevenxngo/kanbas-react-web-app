@@ -1,14 +1,3 @@
-.nav-pills .nav-link {
-    width: 100vw;
-    border-radius: 0;
-    padding: 5px;
-}
-
-.nav-pills .nav-link div span,
-.nav-pills .nav-link div div {
-    margin-block: 3px;
-}
-
 .account {
     margin-top: 10px;
 }
@@ -78,10 +67,10 @@
     color: red;
 }
 
-.account-page-header {
+/* .account-page-header {
     margin: 0;
     margin-left: 20px;
-}
+} */
 
 .edit-btn {
     background-color: lightgrey !important;

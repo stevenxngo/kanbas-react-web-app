@@ -9,10 +9,11 @@
 } 
 
 #page-content-wrapper {
-    min-width: 100vw;
+    /* width: 100vw; */
     margin-top: 25px;
     margin-left: 85px;
     margin-bottom: 25px;
+    margin-right: 25px;
 }
 
 .main-navbar ul {
@@ -37,6 +38,17 @@
     background-color: white;
     color: red;
     border-radius: 0;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
 }
 
 .nav-link.active .main-navbar-item-text {
@@ -68,4 +80,14 @@
 
 .nav-link:visited {
     color: white;
+}
+
+.page-header {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.page-subheader {
+    margin: 0;
+    margin-left: 25px;
 }
