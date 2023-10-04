@@ -91,3 +91,68 @@
     margin: 0;
     margin-left: 25px;
 }
+
+.red {
+    color: red;
+}
+
+.account-sidebar {
+    max-width: 190px;
+    margin-left: 20px;
+}
+
+.account-sidebar ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.account-nav {
+    max-width: 190px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.account-nav li {
+    font-size: 0.9em;
+    padding: 8px 0;
+    text-decoration: none;
+}
+
+.account-nav li a {
+    text-decoration: none;
+    color: red;
+    font-size: 1.2em;
+}
+
+.account-nav li.selected {
+    padding-left: 8px;
+    margin-left: -10px;
+    border-left: 2px solid black;
+}
+
+.account-nav li.selected a {
+    color: black;
+    font-weight: 500;
+}
+
+.grey-btn {
+    background-color: lightgrey !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+/* .grey-btn:hover {
+    background-color: darkgray !important;
+    border: 1px solid grey !important;
+    color: black !important;
+} */
+
+.grey-btn:active {
+    background-color: darkgray !important;
+}
+
+.course-content .done {
+    border-radius: 0;
+    border-left: 3px solid;
+    border-left-color: green;
+}

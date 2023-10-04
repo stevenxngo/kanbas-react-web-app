@@ -1,0 +1,74 @@
+.breadcrumb .breadcrumb-item a {
+    color: red;
+    text-decoration: none;
+}
+
+.sidebar-title {
+    font-style: italic;
+    color: grey;
+    margin-bottom: 200px !important;
+}
+
+.truncate-text {
+    white-space: nowrap; 
+    overflow: hidden;    
+    text-overflow: ellipsis;
+    max-width: 100%;    
+}
+
+/* .course-content {
+    width: 80%;
+} */
+
+.course-content-container {
+    width: 100%;
+}
+
+.fa-check-circle {
+    color: green;
+}
+
+.fa-link {
+    color: green;
+    font-size: 0.8em;
+}
+
+.course-module a {
+    text-decoration: none;
+    color: black;
+}
+
+.course-module a:hover {
+    text-decoration: underline;
+}
+
+.course-module .module-slide-link {
+    color: red;
+}
+
+.module-task a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.side-buttons {
+    margin-left: 40px;
+}
+
+.publish {
+    width: 120px;
+    color: black !important;
+}
+
+.home-option {
+    text-align: left;
+    width: 240px;
+}
+
+.to-do i {
+    color: red;
+}
+
+.side-buttons span a {
+    color:red
+}

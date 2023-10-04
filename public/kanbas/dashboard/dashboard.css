@@ -10,15 +10,15 @@
     row-gap: 20px;
 }
 
-.course-color {
-    background-color: royalblue;
-    min-height: 125px;
-}
-
 .cards-container .card-col {
     width: 250px;
     height: 250px;
     margin-bottom: 30px;
+}
+
+.course-color {
+    background-color: royalblue;
+    min-height: 125px;
 }
 
 .card {
