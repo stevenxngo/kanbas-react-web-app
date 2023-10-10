@@ -1,9 +1,10 @@
 import Assignment3 from "./a3";
-
+import Nav from "../Nav";
 function Labs() {
   return (
     <div>
-      <Assignment3/>
+      <Nav />
+      <Assignment3 />
     </div>
   );
 }
