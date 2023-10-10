@@ -3,7 +3,7 @@ import Styles from "./Styles";
 import JavaScript from "./JavaScript";
 import PathParameters from "./PathParameters";
 import ConditionalOutput from "./ConditionalOutput";
-import TodoList from "./todo/TodoItem";
+import TodoList from "./todo/TodoList";
 
 function Assignment3() {
   return (
