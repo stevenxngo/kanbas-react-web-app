@@ -1,17 +1,23 @@
-.wd-course-navigation {
+.course-nav {
   border-radius: 0px;
-}
-.wd-course-navigation a {
-  background: white;
-  color: red;
-  border-radius: 0px;
-  border: none;
-  margin-left: 10px;
-  border-radius: 0px;
+  text-align: left;
 }
 
-.wd-course-navigation a.list-group-item.active {
-  border-left: 2px solid black;
+.course-nav .list-group-item {
+  height: 40px;
+  border: none;
+  color: red;
+  padding-left: 5px;
+}
+
+.course-nav a:hover {
+  text-decoration: underline ;
+}
+
+.course-nav a.active {
   background-color: white;
   color: black;
+  font-weight: 500;
+  border-radius: 0px;
+  border-left: 2px black solid;
 }

@@ -1,0 +1,70 @@
+.modules {
+    width: 60vw;
+}
+
+.modules .row {
+    width: 60vw;
+    justify-content: right;
+}
+
+.module-btns .collapse-all, .module-btns .collapse-all:hover {
+    width: 120px;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+.module-btns .collapse-all:active {
+    background-color: darkgray !important;
+}
+
+.module-btns .view-progress, .module-btns .view-progress:hover {
+    width: 140px;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+.module-btns .view-progress:active {
+    background-color: darkgray !important;
+}
+
+.module-btns .dropdown-option {
+    width: 135px;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+.module-btns .add-module {
+    width: 110px;
+}
+
+.module-btns .vertical-ellipsis, .module-btns .vertical-ellipsis:hover {
+    width: 30px;
+    align-items: center;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+.module-btns .vertical-ellipsis:active {
+    background-color: darkgray !important;
+}
+
+.vertical-ellipsis {
+    font-weight: 600;
+    color: black;
+}
+
+.modules .list-group-item {
+    border-radius: 0px !important;
+    height: 45px !important;
+}
+
+.modules .module-title {
+    background-color: gainsboro !important;
+    font-weight: 500 !important;
+}
+
+.border-left-active {
+    border-left-style: solid !important;
+    border-left-width: 4px !important;
+    border-left-color: green !important;
+}

@@ -1,0 +1,34 @@
+.col-1 {
+    width: 20px;
+}
+
+.icon {
+    color: red;
+}
+
+.breadcrumb {
+    align-items: center;
+    margin-top: 3px;
+}
+
+.breadcrumb-link {
+    color: red;
+    text-decoration: none;
+    font-size: large;
+}
+
+.breadcrumb-link:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.breadcrumb .active {
+    color: darkgray;
+    font-size: large;
+}
+
+.breadcrumb .active::before {
+    color: darkgray;
+    font-size: small;
+    margin-top: 2px;
+}
