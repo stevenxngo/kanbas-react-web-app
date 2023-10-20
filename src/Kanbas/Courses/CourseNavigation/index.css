@@ -1,6 +1,8 @@
 .course-nav {
+  max-width: 160px !important;
   border-radius: 0px;
   text-align: left;
+  /* margin-left: 5px; */
 }
 
 .course-nav .list-group-item {
@@ -8,6 +10,14 @@
   border: none;
   color: red;
   padding-left: 5px;
+  border-radius: 0 !important;
+}
+
+.course-name {
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .course-nav a:hover {

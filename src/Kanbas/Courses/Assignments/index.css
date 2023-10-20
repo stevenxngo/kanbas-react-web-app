@@ -1,0 +1,84 @@
+.main-content .row {
+    width: 80vw !important;
+}
+
+.main-content .row .col-10 {
+    justify-content: right !important;
+}
+
+.search {
+    width: 250px !important;
+}
+
+.add-group, .add-group:hover {
+    width: 100px;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #bebebe !important;
+}
+
+.vertical-ellipsis {
+    width: 25px !important;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #bebebe !important;
+}
+
+.add-assignment {
+    width: 140px !important;
+}
+
+.assignment-link {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.assignment-link:hover {
+    text-decoration: underline !important;
+}
+
+.edit-content .row {
+    width: 80vw !important;
+    justify-content: right !important;
+}
+
+.publish-status {
+    width: 130px !important;
+    text-decoration: none !important;
+}
+
+.edit-field {
+    justify-content: center !important;
+}
+
+.col-3 {
+    width: 25% !important;
+}
+
+.edit-input {
+    width: 70% !important;
+}
+
+.cancel-button {
+    color: black !important;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #bebebe !important;
+}
+
+.cancel-button:hover {
+    color: black !important;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #bebebe !important;
+}
+
+.assignments .assignments-title {
+    background-color: gainsboro !important;
+    font-weight: 500 !important;
+}
+
+.assignment-link .list-group-item {
+    border-radius: 0px !important;
+    height: 45px !important;
+}
+
+.published {
+    color: green;
+}

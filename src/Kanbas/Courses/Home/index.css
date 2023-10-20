@@ -1,0 +1,45 @@
+.side-btns {
+    padding-left: 40px !important;
+}
+
+.side-button, .side-button:hover, .side-button:active {
+    width: 240px !important;
+    padding: none !important;
+    background-color: lightgray !important;
+    border: 1px solid gray !important;
+    text-align: left !important;
+}
+
+.side-button:active {
+    width: 240px !important;
+    padding: none !important;
+    background-color: darkgray !important;
+    border: 1px solid gray !important;
+    text-align: left !important;
+}
+
+.student-view {
+    width: 150px !important;
+    padding: none !important;
+    background-color: lightgray !important;
+    border: 1px solid gray !important;
+}
+
+.todo {
+    color: red !important;
+}
+
+.primary-todo {
+    color: red !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+}
+
+.primary-todo:hover  {
+    text-decoration: underline !important;
+}
+
+.secondary-todo {
+    color: lightgray !important;
+    font-size: small !important;
+}
