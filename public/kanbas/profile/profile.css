@@ -1,0 +1,71 @@
+.account {
+    margin-top: 10px;
+}
+
+.fa-circle {
+    color: lightgrey;
+}
+
+.profile-section a {
+    text-decoration: none;
+    color: red;
+}
+
+.fa-link {
+    color: grey;
+}
+
+.profile_links {
+    list-style: none;
+    padding: 0;
+}
+
+
+.profile-content {
+    padding-left: 25px;
+}
+
+/* .account-page-header {
+    margin: 0;
+    margin-left: 20px;
+} */
+
+.edit-btn {
+    background-color: lightgrey !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.edit-btn:active {
+    background-color: grey !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.edit-btn:hover {
+    background-color: lightgrey !important;
+    color: black !important;
+    border: 1px solid lightgrey !important;
+}
+
+.fa-xmark {
+    color: #E50000;
+}
+
+.red-btn {
+    color: white !important;
+    background-color: red !important;
+    border: darkred !important;
+}
+
+.red-btn:active {
+    background-color: red !important;
+    color: white !important;
+    border: darkred !important;
+}
+
+.red-btn:hover {
+    background-color: red !important;
+    color: white !important;
+    border: darkred !important;
+}

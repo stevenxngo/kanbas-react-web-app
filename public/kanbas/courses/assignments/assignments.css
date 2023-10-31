@@ -1,0 +1,161 @@
+.breadcrumb .breadcrumb-item a {
+    color: red;
+    text-decoration: none;
+}
+
+.sidebar-title {
+    font-style: italic;
+    color: grey;
+    margin-bottom: 200px !important;
+}
+
+.truncate-text {
+    white-space: nowrap; 
+    overflow: hidden;    
+    text-overflow: ellipsis;
+    max-width: 100%;    
+}
+
+/* .course-content {
+    width: 80%;
+} */
+
+.course-content-container {
+    width: 100% ;
+}
+
+.fa-check-circle {
+    color: green;
+}
+
+.fa-link {
+    color: green;
+    font-size: 0.8em;
+}
+
+.course-content .done {
+    border-radius: 0;
+    border-left: 3px solid;
+    border-left-color: green;
+}
+
+.course-module a {
+    text-decoration: none;
+    color: black;
+}
+
+.course-module a:hover {
+    text-decoration: underline;
+}
+
+.course-module .module-slide-link {
+    color: red;
+}
+
+.module-task a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.side-buttons {
+    margin-left: 40px;
+}
+
+.publish {
+    width: 120px;
+    color: black !important;
+}
+
+.home-option {
+    text-align: left;
+    width: 240px;
+}
+
+.side-buttons .right-btn {
+    background-color: lightgrey !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.course-content .right-btn {
+    background-color: lightgrey !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.side-buttons .right-btn:hover {
+    background-color: darkgray !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.course-content .right-btn:hover {
+    background-color: darkgray !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.side-buttons .right-btn:active {
+    background-color: darkgray !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.course-content .right-btn:active {
+    background-color: darkgray !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+.to-do i {
+    color: red;
+}
+
+.side-buttons span a {
+    color:red
+}
+
+.course-content a {
+    color:black;
+    text-decoration: none;
+}
+
+.course-content a:hover {
+    text-decoration: underline;
+    color:black
+}
+
+.rounded-pill {
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.publish-status {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-published {
+    color: green;
+}
+
+.edit-input {
+    width: 70% !important;
+}
+
+.edit-desc {
+    height: 200% !important;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.save {
+    color: white;
+    background-color: #c70f02;
+}

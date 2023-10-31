@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Grades </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../index.css" rel="stylesheet" />
+    <link href="../assignments/assignments.css" rel="stylesheet" />
+    <link href="./grades.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div id="sidebar-wrapper">
+            <div
+                class="main-navbar d-flex flex-column align-items-center justify-content-center flex-grow-1 text-white bg-dark m-0">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <a href="#" class="d-flex align-items-center mb-md-0 text-white text-decoration-none">
+                        <img width="85" height="85" src="../../images/neu.png" alt="Northeastern University Logo">
+                    </a>
+                    <li class="nav-item">
+                        <a href="../../profile/index.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="account-icon">
+                                    <i class="fa-regular fa-circle-user fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Account</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../dashboard/dashboard.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-solid fa-gauge fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Dashboard</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-solid fa-book fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Courses</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-regular fa-calendar-days fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Calendar</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-regular fa-envelope-open fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Inbox</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-regular fa-clock fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">History</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-solid fa-desktop fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Studio</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Commons</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="navbar-icon">
+                                    <i class="fa-regular fa-circle-question fa-2x"></i>
+                                </span>
+                                <div class="main-navbar-item-text">Help</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div div class="container-fluid" id="page-content-wrapper">
+            <div class="d-flex flex-row align-items-center page-header">
+                <h4>
+                    <i class="fa-solid fa-bars fa-1x me-4 red"></i>
+                </h4>
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item "><a href="../home.html">CS4550.19753.202410</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                    </ol>
+                </nav>
+            </div>
+            <hr>
+            <div class="d-flex flex-row">
+                <div class="flex-column account-sidebar">
+                    <div class="sidebar-title ellipsis mb-2 truncate-text">
+                        202410_1 Fall 2023 Semester
+                    </div>
+                    <ul class="account-nav">
+                        <li><a href="../../courses/home.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href="../assignments/index.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li class="selected"><a href="#">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Progress Reports (EAB Navigate)</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="container-fluid d-flex flex-row me-3">
+                    <div class="col-12 d-flex flex-column mx-4 course-content-container">
+                        <div class="course-content-container">
+                            <div class="float-end">
+                                <button class="btn grey-btn">
+                                    <i class="fa-solid fa-file-import" type="button"></i>
+                                    Import
+                                </button>
+                                <button class="btn grey-btn dropdown-toggle mx-2" data-bs-toggle="dropdown" type="button">
+                                    <i class="fa-solid fa-file-export"></i>
+                                    Export
+                                </button>
+                                <button class="btn grey-btn">
+                                    <i class="fa-solid fa-gear"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        
+                        <div class="row me-4">
+                            <div class="col">
+                                <h5 class="mt-1">Student Names</h5>
+                            </div>
+                            <div class="col">
+                                <h5 class="mt-1">Assignment Names</h5>
+                            </div>
+                        </div>
+                        <div class="row me-4">
+                            <div class="col">
+                                <select class="form-select search">
+                                    <option selected value="PLACEHOLDER">
+                                        <!-- <i class="fa-solid fa-search"></i> -->
+                                        Search Students
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-select">
+                                    <option selected value="PLACEHOLDER">
+                                        <!-- <i class="fa-solid fa-search"></i> -->
+                                        Search Assignments
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row me-4">
+                            <div class="col">
+                                <button href="#" class="btn grey-btn mt-3">
+                                    <i class="fa-solid fa-filter color-medium-grey"></i>
+                                    Apply Filters
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row ms-1 me-5 mt-4">
+                            <table class="table-striped table-bordered table">
+                                <thead>
+                                    <tr>
+                                        <th class="name-header">Student Name</th>
+                                        <td class="grade-header grade">A1 SETUP<br/>Out of 100</td>
+                                        <td class="grade-header grade">A2 HTML<br/>Out of 100</td>
+                                        <td class="grade-header grade">A3 CSS<br/>Out of 100</td>
+                                        <td class="grade-header grade">A4 BOOTSTRAP<br/>Out of 100</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kevin Nguyen</td>
+                                        <td>
+                                            <input type="text" class="form-control grade" value="98%"/>
+                                        </td>
+                                        <td class="grade">100%</td>
+                                        <td class="grade">97%</td>
+                                        <td class="grade">95%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vivian Tran</td>
+                                        <td class="grade">98%</td>
+                                        <td>
+                                            <input type="text" class="form-control grade" value="93%"/>
+                                        </td>
+                                        <td class="grade">99%</td>
+                                        <td class="grade">94%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>David Kim</td>
+                                        <td class="grade">72%</td>
+                                        <td class="grade">89%</td>
+                                        <td>
+                                            <input type="text" class="form-control grade" value="83%"/>
+                                        </td>
+                                        <td class="grade">94%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jenny Lee</td>
+                                        <td class="grade">86%</td>
+                                        <td class="grade">79%</td>
+                                        <td class="grade">91%</td>
+                                        <td>
+                                            <input type="text" class="form-control grade" value="97%"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

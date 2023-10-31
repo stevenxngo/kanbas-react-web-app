@@ -1,0 +1,158 @@
+.main-navbar {
+    width: 85px;
+    min-height: max(100vh, 100%);
+    color: black;
+}
+
+#sidebar-wrapper {
+    position: fixed;
+} 
+
+#page-content-wrapper {
+    /* width: 100vw; */
+    margin-top: 25px;
+    margin-left: 85px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+}
+
+.main-navbar ul {
+    max-width: 100%;
+}
+
+.main-navbar ul li {
+    max-width: 100%;
+}
+
+.main-navbar-item-text {
+    font-size: 0.8em;
+    color: white
+}
+
+.nav-link {
+    color: white;
+    max-width: 100%;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    background-color: white;
+    color: red;
+    border-radius: 0;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.nav-link.active .main-navbar-item-text {
+    color: red;
+}
+
+.navbar-icon {
+    color: red;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.account-icon {
+    color: white;
+}
+
+.nav-link.active .account-icon {
+    color: black;
+}
+
+.nav-link:visited {
+    color: white;
+}
+
+.page-header {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.page-subheader {
+    margin: 0;
+    margin-left: 25px;
+}
+
+.red {
+    color: red;
+}
+
+.account-sidebar {
+    max-width: 190px;
+    margin-left: 20px;
+}
+
+.account-sidebar ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.account-nav {
+    max-width: 190px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.account-nav li {
+    font-size: 0.9em;
+    padding: 8px 0;
+    text-decoration: none;
+}
+
+.account-nav li a {
+    text-decoration: none;
+    color: red;
+    font-size: 1.2em;
+}
+
+.account-nav li.selected {
+    padding-left: 8px;
+    margin-left: -10px;
+    border-left: 2px solid black;
+}
+
+.account-nav li.selected a {
+    color: black;
+    font-weight: 500;
+}
+
+.grey-btn {
+    background-color: lightgrey !important;
+    border: 1px solid grey !important;
+    color: black !important;
+}
+
+/* .grey-btn:hover {
+    background-color: darkgray !important;
+    border: 1px solid grey !important;
+    color: black !important;
+} */
+
+.grey-btn:active {
+    background-color: darkgray !important;
+}
+
+.course-content .done {
+    border-radius: 0;
+    border-left: 3px solid;
+    border-left-color: green;
+}
