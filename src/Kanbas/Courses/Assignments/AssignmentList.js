@@ -15,7 +15,7 @@ function AssignmentList() {
   return (
     <div>
       <div className="list-group mt-4 assignments">
-        <li className="list-group-item list-group-item-header assignments-title">
+        <li className="list-group-item list-group-item-header assignments-title assignment-li">
           <VscGripper className="text me-1" size="20"/>
           <BiCaretDown className="text me-2" size="10"/>
           ASSIGNMENTS
@@ -25,7 +25,7 @@ function AssignmentList() {
         {assignments
           .filter((assignment) => assignment.course === courseId)
           .map((assignment, index) => (
-              <li className="list-group-item border-left-active">
+              <li className="list-group-item border-left-active assignment-li">
                 <VscGripper className="text me-2" size="20"/>
                 <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="assignment-link">{assignment.title}</Link>
                 <HiOutlineEllipsisVertical className="text ms-1 me-0 float-right" size="25"/>

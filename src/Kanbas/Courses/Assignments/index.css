@@ -7,7 +7,7 @@
 }
 
 .search {
-    width: 250px !important;
+    width: 250px;
 }
 
 .add-group, .add-group:hover {
@@ -16,19 +16,19 @@
     border: 1px solid #bebebe !important;
 }
 
-.vertical-ellipsis {
-    width: 25px !important;
-    background-color: #f5f5f5 !important;
-    border: 1px solid #bebebe !important;
+button.vertical-ellipsis {
+    width: 25px;
+    background-color: #f5f5f5;
+    border: 1px solid #bebebe;
 }
 
-.add-assignment {
-    width: 140px !important;
+button.add-assignment {
+    width: 140px;
 }
 
 .assignment-link {
-    color: black !important;
-    text-decoration: none !important;
+    color: black;
+    text-decoration: none;
 }
 
 .assignment-link:hover {
@@ -70,15 +70,20 @@
 }
 
 .assignments .assignments-title {
-    background-color: gainsboro !important;
-    font-weight: 500 !important;
+    background-color: gainsboro;
+    font-weight: 500;
 }
 
-.assignment-link .list-group-item {
+/* .assignment-link .list-group-item {
     border-radius: 0px !important;
     height: 45px !important;
-}
+} */
 
 .published {
     color: green;
+}
+
+li.list-group-item.assignment-li {
+    border-radius: 0px;
+    height: 45px;
 }

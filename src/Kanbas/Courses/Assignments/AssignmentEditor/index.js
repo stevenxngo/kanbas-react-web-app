@@ -55,10 +55,10 @@ function AssignmentEditor() {
         <div className="col">
           <div className="edit-content ms-2">
             <div className="row pe-4">
-              <a className="pt-2 publish-status published">
+              <div className="pt-2 publish-status published">
                 <AiFillCheckCircle className="text me-2" size="20" />
                 Published
-              </a>
+              </div>
               <button className="btn ms-1 vertical-ellipsis ps-1">
                 <HiOutlineEllipsisVertical className="text" size="20" />
               </button>
@@ -76,7 +76,7 @@ function AssignmentEditor() {
               </button>
               <Link
                 to={`/Kanbas/Courses/${courseId}/Assignments`}
-                className="btn btn-danger cancel-button ms-2"
+                className="btn btn-light cancel-button ms-2"
               >
                 Cancel
               </Link>
