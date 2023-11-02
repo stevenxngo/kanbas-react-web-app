@@ -1,5 +1,28 @@
 .course-cards-container {
-    max-width: 1100px;
-    margin-right: 50px;
-    column-gap: 20px;
+    /* max-width: 1100px; */
+    /* margin-right: 50px; */
+    /* column-gap: 20px; */
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+.edit-dashboard {
+    width: 20vw;
+    border-color: #7d7d7d;
+    border-width: 1px;
+}
+
+.edit-dashboard input {
+    margin-bottom: 5px;
+}
+
+.edit-dashboard input:last-child {
+    margin-bottom: 0;
+}
+
+.main-dashboard .list-group-item {
+    width: 270px !important;
+    border: none !important;
+    margin-right: 10px !important;
+    /* margin: 5px !important; */
 }

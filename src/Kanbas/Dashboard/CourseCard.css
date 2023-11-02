@@ -3,7 +3,7 @@
 }
 
 .col {
-    width: 250px !important;
+    width: 270px;
     height: 250px !important;
     margin-block: 30px;
 }
@@ -45,3 +45,7 @@
 .course-card-icon-grey {
     color: grey;
 }
+
+/* .card-link {
+    width: 250px;
+} */
