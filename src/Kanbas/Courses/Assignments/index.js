@@ -8,7 +8,7 @@ import CourseNavigation from "../CourseNavigation";
 import db from "../../Database";
 import AssignmentList from "./AssignmentList";
 import "./index.css";
-import "../index.css";
+// import "../index.css";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -36,7 +36,7 @@ function Assignments() {
         <CourseNavigation className="col-3"/>
         <div className="col">
           <div className="main-content ms-2 me-2">
-            <div className="row ms-0">
+            <div className="row assignment-buttons ms-0">
               <div className="col-2 ps-0">
                 <input type="text" class="form-control search" placeholder="Search for Assignment"/>
               </div>
@@ -52,7 +52,7 @@ function Assignments() {
               </div>
             </div>
             <hr/>
-            <AssignmentList/>
+            <AssignmentList className="assignment-content"/>
           </div>
         </div>
       </div>

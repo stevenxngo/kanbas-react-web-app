@@ -1,6 +1,6 @@
-.main-content .row {
+/* .main-content .row {
     width: 80vw !important;
-}
+} */
 
 .main-content .row .col-10 {
     justify-content: right !important;
@@ -36,7 +36,7 @@ button.add-assignment {
 }
 
 .edit-content .row {
-    width: 80vw !important;
+    /* width: 80vw !important; */
     justify-content: right !important;
 }
 
@@ -86,4 +86,12 @@ button.add-assignment {
 li.list-group-item.assignment-li {
     border-radius: 0px;
     height: 45px;
+}
+
+/* .assignment-buttons {
+    width: 25vw !important;
+} */
+
+.assignment-content {
+    width: 75vw !important;
 }

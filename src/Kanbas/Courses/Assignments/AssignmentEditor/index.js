@@ -4,7 +4,7 @@ import { HiOutlineBars3 } from "react-icons/hi2";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { HiOutlineEllipsisVertical } from "react-icons/hi2";
 import CourseNavigation from "../../CourseNavigation";
-import "../../index.css";
+// import "../../index.css";
 import "../index.css";
 
 function AssignmentEditor() {
@@ -20,7 +20,7 @@ function AssignmentEditor() {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
-    <div className="courses">
+    <div className="">
       <div className="row mt-3 ms-0">
         <HiOutlineBars3 className="text icon ms-3 col-1" size="35" />
         <nav aria-label="breadcrumb" className="mb-0 col-9">
@@ -53,8 +53,8 @@ function AssignmentEditor() {
       <div className="row mt-4 ms-1">
         <CourseNavigation className="col-3" />
         <div className="col">
-          <div className="edit-content ms-2">
-            <div className="row pe-4">
+          <div className="edit-content ms-2 me-2">
+            <div className="row float-right pe-4">
               <div className="pt-2 publish-status published">
                 <AiFillCheckCircle className="text me-2" size="20" />
                 Published
