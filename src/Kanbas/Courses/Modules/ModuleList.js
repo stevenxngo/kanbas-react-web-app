@@ -22,7 +22,7 @@ function ModuleList() {
   return (
     <div className="list-group main-content mt-4">
       <li className="list-group-item">
-        <div>
+        <div className="edit-module-section">
           <h5>Edit Module List</h5>
           <input
             value={module.name}
@@ -30,7 +30,7 @@ function ModuleList() {
               dispatch(setModule({ ...module, name: e.target.value }))
             }
             placeholder="Module Name"
-            className="me-2 col edit-module-list"
+            className="me-2  module-input edit-module-list"
           />
           <button
             onClick={() => dispatch(addModule({ ...module, course: courseId }))}
@@ -60,32 +60,37 @@ function ModuleList() {
         .filter((module) => module.course === courseId)
         .map((module, index) => (
           <div className="mt-4">
-            <li className="list-group-item module list-group-item-header">
+            <li className="list-group-item module module-header list-group-item-header">
               <VscGripper className="text me-1" size="20" />
               <BiCaretDown className="text me-2" size="10" />
               {module.name} {module.description}
-              <HiOutlineEllipsisVertical
-                className="text ms-1 me-0 float-right"
-                size="25"
-              />
-              <AiOutlinePlus className="text mt-1 ms-2 float-right" size="15" />
-              <BiCaretDown className="text mt-1 float-right" size="15" />
-              <AiFillCheckCircle
-                className="text published mt-1 float-right"
-                size="20"
-              />
-              <button
-                onClick={() => dispatch(deleteModule(module._id))}
-                className="btn btn-danger mb-2 me-2 p-1 font-small float-right"
-              >
-                Delete
-              </button>
-              <button
-                onClick={() => dispatch(setModule(module))}
-                className="btn btn-light mb-2 me-2 p-1 font-small float-right"
-              >
-                Edit
-              </button>
+              <div className="float-end">
+                <button
+                  onClick={() => dispatch(deleteModule(module._id))}
+                  className="btn btn-danger mb-3 me-2 p-1 font-small float-right"
+                >
+                  Delete
+                </button>
+                <button
+                  onClick={() => dispatch(setModule(module))}
+                  className="btn btn-light mb-3 me-2 p-1 font-small float-right"
+                >
+                  Edit
+                </button>
+                <HiOutlineEllipsisVertical
+                  className="text mb-3 ms-1 me-0 float-right"
+                  size="25"
+                />
+                <AiOutlinePlus
+                  className="text mb-3 mt-1 ms-2 float-right"
+                  size="15"
+                />
+                <BiCaretDown className="text mb-3 mt-1 float-right" size="15" />
+                <AiFillCheckCircle
+                  className="text mb-3 published mt-1 float-right"
+                  size="20"
+                />
+              </div>
             </li>
             {module.lessons &&
               module.lessons.map((lesson, index) => (

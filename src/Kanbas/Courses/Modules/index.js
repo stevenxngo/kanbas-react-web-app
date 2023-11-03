@@ -32,7 +32,7 @@ function Modules() {
       <hr className="mt-2 ms-4"/>
       <div className="row mt-4 ms-1">
         <CourseNavigation className="col-3"/>
-        <div className="col-8">
+        <div className="col">
           <div className="modules module-btns ms-2">
             <div className="row ms-0">
               <button className="btn ms-1 collapse-all">
@@ -49,8 +49,9 @@ function Modules() {
                 <HiOutlineEllipsisVertical className="text" size="20"/></button>
             </div>
             <hr/>
-            <ModuleList/>
+            {/* <ModuleList/> */}
           </div>
+          <ModuleList/>
         </div>
       </div>
     </div>

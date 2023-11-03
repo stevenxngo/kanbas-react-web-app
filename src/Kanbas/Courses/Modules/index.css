@@ -1,9 +1,10 @@
-.modules {
+/* .modules {
     width: 60vw;
-}
+} */
 
 .modules .row {
-    width: 60vw;
+    /* width: 60vw; */
+    padding-right: 10px;
     justify-content: right;
 }
 
@@ -55,7 +56,7 @@
 
 .modules .list-group-item {
     border-radius: 0px !important;
-    height: 45px !important;
+    /* height: 45px !important; */
 }
 
 .modules .module-title {
@@ -67,4 +68,29 @@
     border-left-style: solid !important;
     border-left-width: 4px !important;
     border-left-color: green !important;
+}
+
+/* .module-input {
+    height: 45px;
+} */
+
+.edit-module-list {
+    width: 250px;
+}
+
+.font-small { 
+    font-size: small !important; 
+}
+
+.edit-module-section {
+    height: 150px !important;
+}
+
+.modules .module {
+    border-radius: 0px;
+    /* height: 45px; */
+}
+
+.module-header {
+    background-color: lightgray !important;
 }

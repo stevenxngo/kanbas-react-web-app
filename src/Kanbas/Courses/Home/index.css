@@ -1,9 +1,13 @@
 .side-btns {
-    padding-left: 40px !important;
+    padding-left: 20px !important;
+}
+
+.side-button {
+    font-size: medium !important;
 }
 
 .side-button, .side-button:hover, .side-button:active {
-    width: 240px !important;
+    width: 200px !important;
     padding: none !important;
     background-color: lightgray !important;
     border: 1px solid gray !important;
@@ -11,7 +15,7 @@
 }
 
 .side-button:active {
-    width: 240px !important;
+    width: 200px !important;
     padding: none !important;
     background-color: darkgray !important;
     border: 1px solid gray !important;
@@ -42,4 +46,8 @@
 .secondary-todo {
     color: lightgray !important;
     font-size: small !important;
+}
+
+.font-small { 
+    font-size: small !important; 
 }
