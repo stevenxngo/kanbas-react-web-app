@@ -8,13 +8,13 @@ import CourseNavigation from "../CourseNavigation";
 import db from "../../Database";
 import AssignmentList from "./AssignmentList";
 import "./index.css";
-import "../index.css";
+// import "../index.css";
 
 function Assignments() {
   const { courseId } = useParams();
   const course = db.courses.find((course) => course._id === courseId);
   return (
-    <div>
+    <div className="assignments">
       <div className="row mt-3 ms-0">
         <HiOutlineBars3 className="text icon ms-3 col-1" size="35"/>
         <nav aria-label="breadcrumb" className="mb-0 col-9">
@@ -52,7 +52,7 @@ function Assignments() {
               </div>
             </div>
             <hr/>
-            <AssignmentList/>
+            <AssignmentList className="assignments-list"/>
           </div>
         </div>
       </div>
