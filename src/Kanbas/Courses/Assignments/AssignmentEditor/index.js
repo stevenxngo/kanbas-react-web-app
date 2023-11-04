@@ -66,6 +66,63 @@ function AssignmentEditor() {
             <hr />
             Assignment Name:
             <input value={assignment.title} className="form-control mb-2" />
+            <textarea
+              class="form-control mt-4"
+              placeholder="Insert description"
+            ></textarea>
+            <div class="row mt-4">
+              <div class="col-3 pe-0">
+                <label for="assignment-points" class="me-2 float-end">
+                  Points
+                </label>
+              </div>
+              <div class="col mb-0">
+                <input
+                  type="text"
+                  class="form-control edit-input"
+                  id="assignment-points"
+                  value="100"
+                />
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-3 pe-0">
+                <label for="assignment-group" class="me-2 float-end">
+                  Assignment Group
+                </label>
+              </div>
+              <div class="col mb-0">
+                <select id="assignment-group" class="form-select edit-input">
+                  <option selected value="ASSIGNMENTS">
+                    ASSIGNMENTS
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-3 pe-0">
+                <label for="display-grade" class="me-2 float-end">
+                  Display Grade as
+                </label>
+              </div>
+              <div class="col mb-0">
+                <select id="display-grade" class="form-select edit-input">
+                  <option selected value="PERCENTAGE">
+                    Percentage
+                  </option>
+                </select>
+                <div class="mt-4">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="count-grade"
+                  />
+                  <label class="form-check-label ms-2" for="count-grade">
+                    Do not count this assignment towards the final grade
+                  </label>
+                </div>
+              </div>
+            </div>
             <hr />
             <div className="float-end">
               <button

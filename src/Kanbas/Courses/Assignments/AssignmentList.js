@@ -19,8 +19,10 @@ function AssignmentList() {
           <VscGripper className="text me-1" size="20"/>
           <BiCaretDown className="text me-2" size="10"/>
           ASSIGNMENTS
+          <div className="float-end">
+          <AiOutlinePlus className="text  ms-2 float-right" size="15"/>
           <HiOutlineEllipsisVertical className="text ms-1 me-0 float-right" size="25"/>
-          <AiOutlinePlus className="text mt-1 ms-2 float-right" size="15"/>
+          </div>
         </li>
         {assignments
           .filter((assignment) => assignment.course === courseId)

@@ -95,3 +95,7 @@ li.list-group-item.assignment-li {
 .assignment-content {
     width: 75vw !important;
 }
+
+.col {
+    height: 100% !important;
+}
