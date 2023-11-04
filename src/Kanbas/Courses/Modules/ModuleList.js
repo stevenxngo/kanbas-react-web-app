@@ -97,14 +97,16 @@ function ModuleList() {
                 <li key={index} className="list-group-item border-left-active">
                   <VscGripper className="text me-2" size="20" />
                   {lesson.name}
-                  <HiOutlineEllipsisVertical
-                    className="text ms-1 me-0 float-right"
-                    size="25"
-                  />
-                  <AiFillCheckCircle
-                    className="text published float-right"
-                    size="20"
-                  />
+                  <div className="float-end">
+                    <HiOutlineEllipsisVertical
+                      className="text ms-1 me-0 float-right"
+                      size="25"
+                    />
+                    <AiFillCheckCircle
+                      className="text published float-right"
+                      size="20"
+                    />
+                  </div>
                 </li>
               ))}
           </div>
