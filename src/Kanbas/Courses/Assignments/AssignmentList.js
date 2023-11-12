@@ -3,15 +3,18 @@ import { Link, useParams } from "react-router-dom";
 import { VscGripper } from "react-icons/vsc";
 import { BiCaretDown } from "react-icons/bi";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { deleteAssignment } from "./assignmentsReducer";
 import { HiOutlineEllipsisVertical } from "react-icons/hi2";
 import { AiOutlinePlus } from "react-icons/ai";
 import db from "../../Database";
+import { useDispatch } from "react-redux";
 import "../index.css";
 import "./index.css";
 
 function AssignmentList() {
   const { courseId } = useParams();
   const assignments = db.assignments;
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="list-group mt-4 assignments">
@@ -39,8 +42,22 @@ function AssignmentList() {
                 {assignment.title}
               </Link>
               <div className="float-end">
+                <button
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        "Are you sure you want to remove this assignment?"
+                      )
+                    ) {
+                      dispatch(deleteAssignment(assignment._id));
+                    }
+                  }}
+                  className="btn btn-danger me-2 p-1 font-small float-right"
+                >
+                  Delete
+                </button>
                 <HiOutlineEllipsisVertical
-                  className="text ms-1 me-0 float-right"
+                  className="text ms-1 me-0  float-right"
                   size="25"
                 />
                 <AiFillCheckCircle
