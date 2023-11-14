@@ -88,6 +88,32 @@ function WorkingWithObjects() {
         className="mb-2"
         type="checkbox"
       />
+      <h4>Retrieving Objects</h4>
+      <a
+        href="http://localhost:4000/a5/assignment"
+        className="btn btn-primary me-2"
+      >
+        Get Assignment
+      </a>
+      <h4>Retrieving Properties</h4>
+      <a
+        href="http://localhost:4000/a5/assignment/title"
+        className="btn btn-primary me-2"
+      >
+        Get Title
+      </a>
+      <a
+        href="http://localhost:4000/a5/assignment/score"
+        className="btn btn-primary me-2"
+      >
+        Get Score
+      </a>
+      <a
+        href="http://localhost:4000/a5/assignment/completed"
+        className="btn btn-primary me-2"
+      >
+        Get Completed
+      </a>
     </div>
   );
 }
