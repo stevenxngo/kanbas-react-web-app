@@ -25,8 +25,8 @@ function Home() {
       <div className="row mt-3 ms-0">
         <HiOutlineBars3 className="text icon ms-3 col-1" size="35" />
         <nav aria-label="breadcrumb" className="mb-0 col-9">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
               <Link
                 key={course._id}
                 to={`/Kanbas/Courses/${course._id}`}
@@ -35,12 +35,12 @@ function Home() {
                 {course.number}.{course._id}
               </Link>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">
+            <li className="breadcrumb-item active" aria-current="page">
               Home
             </li>
           </ol>
         </nav>
-        <button class="btn mb-1 student-view">
+        <button className="btn mb-1 student-view">
           <BiGlassesAlt className="text me-1" />
           Student View
         </button>
@@ -54,7 +54,7 @@ function Home() {
               <button className="btn ms-1 collapse-all">Collapse All</button>
               <button className="btn ms-1 view-progress">View Progress</button>
               <select className="form-select ms-1 dropdown-option">
-                <option selected value="PUBLISH-ALL">
+                <option defaultValue={"PUBLISH-ALL"} value="PUBLISH-ALL">
                   Publish All
                 </option>
               </select>
@@ -71,31 +71,31 @@ function Home() {
           </div>
         </div>
         <div className="col  side-btns">
-          <button class="btn side-button mb-1">
+          <button className="btn side-button mb-1">
             <TbFileImport className="text me-1" />
             Import Existing Content
           </button>
-          <button class="btn side-button mb-1">
+          <button className="btn side-button mb-1">
             <FiArrowRightCircle className="text me-1" />
             Import from Commons
           </button>
-          <button class="btn side-button mb-1">
+          <button className="btn side-button mb-1">
             <FaRegLifeRing className="text me-1" />
             Choose Home Page
           </button>
-          <button class="btn side-button mb-1">
+          <button className="btn side-button mb-1">
             <RiBarChart2Fill className="text me-1" />
             View Course Stream
           </button>
-          <button class="btn side-button mb-1">
+          <button className="btn side-button mb-1">
             <RiMegaphoneLine className="text me-1" />
             New Announcement
           </button>
-          <button class="btn side-button mb-1">
+          <button className="btn side-button mb-1">
             <RiBarChart2Fill className="text me-1" />
             New Analytics
           </button>
-          <button class="btn side-button mb-1">
+          <button className="btn side-button mb-1">
             <BsBell className="text me-1" />
             View Course Notifications
           </button>

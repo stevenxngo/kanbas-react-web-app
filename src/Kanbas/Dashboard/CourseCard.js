@@ -50,7 +50,7 @@ const CourseCard = ({
             <div
               key={course.number}
               to={"/Kanbas/Dashboard"}
-              class="course-card-icon-grey"
+              className="course-card-icon-grey"
             >
 
               <button

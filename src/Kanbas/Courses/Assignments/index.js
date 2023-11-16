@@ -1,4 +1,4 @@
-import React from "react";
+import { React , useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { BiGlassesAlt } from "react-icons/bi";
@@ -18,16 +18,16 @@ function Assignments() {
       <div className="row mt-3 ms-0">
         <HiOutlineBars3 className="text icon ms-3 col-1" size="35"/>
         <nav aria-label="breadcrumb" className="mb-0 col-9">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
               <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="breadcrumb-link">
                 {course.number}.{course._id}
               </Link>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Assignments</li> 
+            <li className="breadcrumb-item active" aria-current="page">Assignments</li> 
           </ol>
         </nav>
-        <button class="btn mb-1 student-view">
+        <button className="btn mb-1 student-view">
               <BiGlassesAlt className="text me-1"/>
                 Student View</button>
       </div>
@@ -38,7 +38,7 @@ function Assignments() {
           <div className="main-content ms-2 me-2">
             <div className="row assignment-buttons ms-0">
               <div className="col-2 ps-0">
-                <input type="text" class="form-control search" placeholder="Search for Assignment"/>
+                <input type="text" className="form-control search" placeholder="Search for Assignment"/>
               </div>
               <div className="col-10 pe-4 assignment-btns">
                 <button className="btn ms-1 vertical-ellipsis ps-1 float-end">

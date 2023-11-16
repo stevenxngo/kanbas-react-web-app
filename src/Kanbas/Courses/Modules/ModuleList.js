@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { VscGripper } from "react-icons/vsc";
@@ -11,7 +11,9 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
 import "./index.css";
 
 function ModuleList() {
@@ -19,6 +21,30 @@ function ModuleList() {
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+  useEffect(() => {
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)));
+  }, [courseId]);
+
   return (
     <div className="list-group main-content mt-4">
       <li className="list-group-item">
@@ -32,16 +58,10 @@ function ModuleList() {
             placeholder="Module Name"
             className="me-2  module-input edit-module-list"
           />
-          <button
-            onClick={() => dispatch(addModule({ ...module, course: courseId }))}
-            className="btn btn-success ms-1"
-          >
+          <button onClick={handleAddModule} className="btn btn-success ms-1">
             Add
           </button>
-          <button
-            onClick={() => dispatch(updateModule(module))}
-            className="btn btn-primary ms-1"
-          >
+          <button onClick={handleUpdateModule} className="btn btn-primary ms-1">
             Update
           </button>
           <div className="col mt-2">
@@ -59,14 +79,14 @@ function ModuleList() {
       {modules
         .filter((module) => module.course === courseId)
         .map((module, index) => (
-          <div className="mt-4">
+          <div key={index} className="mt-4">
             <li className="list-group-item module module-header list-group-item-header">
               <VscGripper className="text me-1" size="20" />
               <BiCaretDown className="text me-2" size="10" />
               {module.name} {module.description}
               <div className="float-end">
                 <button
-                  onClick={() => dispatch(deleteModule(module._id))}
+                  onClick={() => handleDeleteModule(module._id)}
                   className="btn btn-danger mt-0 me-2 p-1 font-small float-right"
                 >
                   Delete

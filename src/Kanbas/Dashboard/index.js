@@ -55,13 +55,14 @@ function Dashboard({
         </div>
 
         <div className="list-group course-cards-container ms-2 mb-4">
-          {courses.map((course) => {
+          {courses.map((course, index) => {
             return (
               <CourseCard
                 course={course}
                 setCourse={setCourse}
                 deleteCourse={deleteCourse}
                 className="list-group-item"
+                key={index}
               />
             );
           })}

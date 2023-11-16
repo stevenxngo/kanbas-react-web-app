@@ -16,16 +16,16 @@ function Modules() {
       <div className="row mt-3 ms-0">
         <HiOutlineBars3 className="text icon ms-3 col-1" size="35"/>
         <nav aria-label="breadcrumb" className="mb-0 col-9">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
               <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="breadcrumb-link">
                 {course.number}.{course._id}
               </Link>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Modules</li> 
+            <li className="breadcrumb-item active" aria-current="page">Modules</li> 
           </ol>
         </nav>
-        <button class="btn mb-1 student-view">
+        <button className="btn mb-1 student-view">
             <BiGlassesAlt className="text me-1"/>
               Student View</button>
       </div>
@@ -40,7 +40,7 @@ function Modules() {
               <button className="btn ms-1 view-progress">
                 View Progress</button>
               <select className="form-select ms-1 dropdown-option">
-                <option selected value="PUBLISH-ALL">
+                <option defaultValue={"PUBLISH-ALL"} value="PUBLISH-ALL">
                   Publish All</option></select>
               <button className="btn btn-danger ms-1 add-module">
                 <AiOutlinePlus className="mt-0 me-2"/>

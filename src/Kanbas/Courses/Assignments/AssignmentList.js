@@ -1,13 +1,19 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { VscGripper } from "react-icons/vsc";
 import { BiCaretDown } from "react-icons/bi";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { deleteAssignment } from "./assignmentsReducer";
 import { HiOutlineEllipsisVertical } from "react-icons/hi2";
 import { AiOutlinePlus } from "react-icons/ai";
 import db from "../../Database";
 import { useDispatch } from "react-redux";
+import axios from "axios";
+import {
+  deleteAssignment,
+  setAssignment,
+  setAssignments,
+} from "./assignmentsReducer";
+import * as client from "./client";
 import "../index.css";
 import "./index.css";
 
@@ -15,6 +21,19 @@ function AssignmentList() {
   const { courseId } = useParams();
   const assignments = db.assignments;
   const dispatch = useDispatch();
+
+  const handleDeleteAssignment = (assignmentId) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+
+  useEffect(() => {
+    client
+      .findAssignmentsForCourse(courseId)
+      .then((assignments) => dispatch(setAssignments(assignments)));
+  }, [courseId]);
+
   return (
     <div>
       <div className="list-group mt-4 assignments">
@@ -33,7 +52,10 @@ function AssignmentList() {
         {assignments
           .filter((assignment) => assignment.course === courseId)
           .map((assignment, index) => (
-            <li className="list-group-item border-left-active assignment-li">
+            <li
+              key={index}
+              className="list-group-item border-left-active assignment-li"
+            >
               <VscGripper className="text me-2" size="20" />
               <Link
                 to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
@@ -49,7 +71,7 @@ function AssignmentList() {
                         "Are you sure you want to remove this assignment?"
                       )
                     ) {
-                      dispatch(deleteAssignment(assignment._id));
+                      handleDeleteAssignment(assignment._id);
                     }
                   }}
                   className="btn btn-danger me-2 p-1 font-small float-right"
