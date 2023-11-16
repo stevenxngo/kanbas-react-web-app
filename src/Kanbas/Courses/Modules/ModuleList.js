@@ -67,27 +67,27 @@ function ModuleList() {
               <div className="float-end">
                 <button
                   onClick={() => dispatch(deleteModule(module._id))}
-                  className="btn btn-danger mb-3 me-2 p-1 font-small float-right"
+                  className="btn btn-danger mt-0 me-2 p-1 font-small float-right"
                 >
                   Delete
                 </button>
                 <button
                   onClick={() => dispatch(setModule(module))}
-                  className="btn btn-light mb-3 me-2 p-1 font-small float-right"
+                  className="btn btn-light mt-0 me-2 p-1 font-small float-right"
                 >
                   Edit
                 </button>
                 <HiOutlineEllipsisVertical
-                  className="text mb-3 ms-1 me-0 float-right"
+                  className="text mt-0 ms-1 me-0 float-right"
                   size="25"
                 />
                 <AiOutlinePlus
-                  className="text mb-3 mt-1 ms-2 float-right"
+                  className="text mt-0 ms-2 float-right"
                   size="15"
                 />
-                <BiCaretDown className="text mb-3 mt-1 float-right" size="15" />
+                <BiCaretDown className="text mt-0 float-right" size="15" />
                 <AiFillCheckCircle
-                  className="text mb-3 published mt-1 float-right"
+                  className="text mt-0 published float-right"
                   size="20"
                 />
               </div>
