@@ -6,13 +6,14 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import "./index.css";
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Courses({ courses }) {
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
-  // const course = courses.find((course) => course._id === courseId);
 
-  const URL = "http://localhost:4000/api/courses";
+  // const URL = "http://localhost:4000/api/courses";
+  const URL = `${API_BASE}/courses`;
   const findCourseById = async (courseId) => {
     const response = await axios.get(`${URL}/${courseId}`);
     setCourse(response.data);

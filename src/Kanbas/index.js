@@ -7,12 +7,14 @@ import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
 import "./index.css";
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Kanbas() {
   // const [courses, setCourses] = useState(db.courses);
 
   const [courses, setCourses] = useState([]);
-  const URL = "http://localhost:4000/api/courses";
+  // const URL = "http://localhost:4000/api/courses";
+  const URL = `${API_BASE}/courses`;
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
@@ -27,11 +29,11 @@ function Kanbas() {
 
   const addNewCourse = async () => {
     const response = await axios.post(URL, course);
-    setCourses([...courses, { ...response.data }]);
+    setCourses([...courses, response.data ]);
   };
 
   const deleteCourse = async (courseId) => {
-    const response = await axios.delete(`${URL}/${course._id}`);
+    const response = await axios.delete(`${URL}/${course.id}`);
     setCourses(courses.filter((course) => course._id !== courseId));
   };
 
