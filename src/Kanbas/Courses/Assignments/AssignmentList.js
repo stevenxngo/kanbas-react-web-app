@@ -5,9 +5,10 @@ import { BiCaretDown } from "react-icons/bi";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { HiOutlineEllipsisVertical } from "react-icons/hi2";
 import { AiOutlinePlus } from "react-icons/ai";
-import db from "../../Database";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import {
   deleteAssignment,
   setAssignment,
@@ -18,21 +19,63 @@ import "../index.css";
 import "./index.css";
 
 function AssignmentList() {
+  // const { courseId } = useParams();
+  // const assignments = db.assignments;
+  // const dispatch = useDispatch();
+
+  // const handleDeleteAssignment = (assignmentId) => {
+  //   client.deleteAssignment(assignmentId).then((status) => {
+  //     dispatch(deleteAssignment(assignmentId));
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   client
+  //     .findAssignmentsForCourse(courseId)
+  //     .then((assignments) => dispatch(setAssignments(assignments)));
+  // }, [courseId]);
+
   const { courseId } = useParams();
-  const assignments = db.assignments;
-  const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+    const dispatch = useDispatch();
+    const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
+    const [selectedAssignment, setSelectedAssignment] = useState({title: ''});
+    const formatDate = (dateStr) => {
+        const date = new Date(dateStr.replace(/-/g, '/'));
+        const options = { month: "long", day: "numeric" };
+        return date.toLocaleDateString("en-US", options);
+    }
+    // const newAssignment = {
+    //     title: "New Assignment", 
+    //     description: "New Assignment Description",
+    //     dueDate: "2023-09-18",
+    //     availableFromDate: "2023-09-11",
+    //     availableUntilDate: "2023-09-18"
+    // }
 
-  const handleDeleteAssignment = (assignmentId) => {
-    client.deleteAssignment(assignmentId).then((status) => {
-      dispatch(deleteAssignment(assignmentId));
-    });
-  };
+    const [assignmentTitle, setAssignmentTitle] = useState("");
+    const [assignmentDescription, setAssignmentDescription] = useState("");
 
-  useEffect(() => {
-    client
-      .findAssignmentsForCourse(courseId)
-      .then((assignments) => dispatch(setAssignments(assignments)));
-  }, [courseId]);
+    const getAssignmentTitle = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}/title`
+        );
+        setAssignmentTitle(response.data);
+    }
+
+    const handleDeleteAssignment = (assignmentId) => {
+        client.deleteAssignment(assignmentId).then((status) => {
+          dispatch(deleteAssignment(assignmentId));
+        });
+    };
+
+    useEffect(() => {
+        client.findAssignmentsForCourse(courseId)
+          .then((assignments) =>
+            dispatch(setAssignments(assignments))
+        );
+    }, [courseId]);
 
   return (
     <div>
@@ -49,7 +92,7 @@ function AssignmentList() {
             />
           </div>
         </li>
-        {assignments
+        {courseAssignments
           .filter((assignment) => assignment.course === courseId)
           .map((assignment, index) => (
             <li

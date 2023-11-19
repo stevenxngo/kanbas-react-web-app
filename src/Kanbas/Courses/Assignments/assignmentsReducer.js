@@ -42,6 +42,7 @@ const assignmentsSlice = createSlice({
 });
 
 export const {
+  setAssignment,
   setAssignments,
   addAssignment,
   deleteAssignment,

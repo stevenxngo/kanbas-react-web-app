@@ -54,7 +54,11 @@ button.add-assignment {
 }
 
 .edit-input {
-    width: 70% !important;
+    width: 50% !important;
+}
+
+.half-edit-input {
+    width: 24% !important;
 }
 
 .cancel-button {
@@ -98,4 +102,8 @@ li.list-group-item.assignment-li {
 
 .col {
     height: 100% !important;
+}
+
+.bold-text {
+    font-weight: 500;
 }

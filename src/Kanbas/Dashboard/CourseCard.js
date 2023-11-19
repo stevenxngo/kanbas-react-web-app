@@ -6,13 +6,7 @@ import "../index.css";
 import "./CourseCard.css";
 
 const CourseCard = ({
-  course = {
-    _id: "",
-    name: "",
-    number: "",
-    startDate: "",
-    endDate: "",
-  },
+  course,
   setCourse,
   deleteCourse,
 }) => {
