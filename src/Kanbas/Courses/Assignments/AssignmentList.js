@@ -19,40 +19,12 @@ import "../index.css";
 import "./index.css";
 
 function AssignmentList() {
-  // const { courseId } = useParams();
-  // const assignments = db.assignments;
-  // const dispatch = useDispatch();
-
-  // const handleDeleteAssignment = (assignmentId) => {
-  //   client.deleteAssignment(assignmentId).then((status) => {
-  //     dispatch(deleteAssignment(assignmentId));
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   client
-  //     .findAssignmentsForCourse(courseId)
-  //     .then((assignments) => dispatch(setAssignments(assignments)));
-  // }, [courseId]);
 
   const { courseId } = useParams();
     const navigate = useNavigate();
     const assignments = useSelector((state) => state.assignmentsReducer.assignments);
     const dispatch = useDispatch();
     const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
-    const [selectedAssignment, setSelectedAssignment] = useState({title: ''});
-    const formatDate = (dateStr) => {
-        const date = new Date(dateStr.replace(/-/g, '/'));
-        const options = { month: "long", day: "numeric" };
-        return date.toLocaleDateString("en-US", options);
-    }
-    // const newAssignment = {
-    //     title: "New Assignment", 
-    //     description: "New Assignment Description",
-    //     dueDate: "2023-09-18",
-    //     availableFromDate: "2023-09-11",
-    //     availableUntilDate: "2023-09-18"
-    // }
 
     const [assignmentTitle, setAssignmentTitle] = useState("");
     const [assignmentDescription, setAssignmentDescription] = useState("");

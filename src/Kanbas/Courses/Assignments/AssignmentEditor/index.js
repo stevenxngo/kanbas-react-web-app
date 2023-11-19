@@ -13,17 +13,6 @@ import * as client from "../client";
 import "../index.css";
 
 function AssignmentEditor() {
-  // const { assignmentId } = useParams();
-  // const assignment = db.assignments.find(
-  //   (assignment) => assignment._id === assignmentId
-  // );
-  // const { courseId } = useParams();
-  // const course = db.courses.find((course) => course._id === courseId);
-  // const navigate = useNavigate();
-  // const handleSave = () => {
-  //   navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-  // };
-
   const dispatch = useDispatch();
   const { assignmentId } = useParams();
   const { courseId } = useParams();
@@ -62,6 +51,8 @@ function AssignmentEditor() {
     assignment.availableFromDate
   );
   const [availableTo, setAvailableTo] = useState(assignment.availableUntilDate);
+
+  console.log(assignment);
 
   return (
     <div className="row mt-4 ms-1">
