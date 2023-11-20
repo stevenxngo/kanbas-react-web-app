@@ -85,7 +85,7 @@ button.add-assignment {
 
 li.list-group-item.assignment-li {
     border-radius: 0px;
-    height: 45px;
+    /* height: 45px; */
 }
 
 /* .assignment-buttons {

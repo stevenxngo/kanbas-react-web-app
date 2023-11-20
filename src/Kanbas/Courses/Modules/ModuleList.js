@@ -17,6 +17,7 @@ import "./index.css";
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
+  // console.log(modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
   return (
