@@ -4,12 +4,9 @@ import { HiOutlineEllipsisVertical } from "react-icons/hi2";
 import CourseNavigation from "../CourseNavigation";
 import AssignmentList from "./AssignmentList";
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import * as client from "./client";
-import axios from "axios";
 import {
-  deleteAssignment,
   setAssignment,
   setAssignments,
 } from "./assignmentsReducer";

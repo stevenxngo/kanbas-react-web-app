@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { FaEllipsisV } from "react-icons/fa";
-import { PiNotePencil } from "react-icons/pi";
 import { TfiWrite } from "react-icons/tfi";
 import "../index.css";
 import "./CourseCard.css";
