@@ -89,17 +89,17 @@ function Account() {
             <option value="STUDENT">Student</option>
           </select>
           <div>
-            <button className="btn mt-2 btn-primary" onClick={save}>
+            <button className="btn mt-2 btn-primary account-btn" onClick={save}>
               Save
             </button>
           </div>
           <div>
-            <Link to="/Kanbas/admin/users" className="btn btn-success mt-2">
+            <Link to="/Kanbas/admin/users" className="btn btn-success mt-2 account-btn">
               Users
             </Link>
           </div>
           <div>
-            <button className="btn mt-2 btn-danger" onClick={signout}>
+            <button className="btn mt-2 btn-danger account-btn" onClick={signout}>
               Signout
             </button>
           </div>
