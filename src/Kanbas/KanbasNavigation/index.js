@@ -1,14 +1,18 @@
 import { Link, useLocation } from "react-router-dom";
 import { BiUserCircle, BiBook, BiCalendar } from "react-icons/bi";
+import { FaSignInAlt } from "react-icons/fa";
 import { TfiDashboard } from "react-icons/tfi";
 import { SlEnvolopeLetter, SlClock } from "react-icons/sl";
 import { TbPresentationAnalytics } from "react-icons/tb";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { MdPeople } from "react-icons/md"
 import "./index.css";
 
 function KanbasNavigation() {
   const links = [
+    "Signin",
+    "Signup",
     "Account",
     "Dashboard",
     "Courses",
@@ -20,6 +24,8 @@ function KanbasNavigation() {
     "Help",
   ];
   const linksToIconsMap = {
+    Signin: <FaSignInAlt className="wd-icon" />,
+    Signup: <MdPeople className="wd-icon" />,
     Account: <BiUserCircle className="wd-icon" />,
     Dashboard: <TfiDashboard className="wd-icon" />,
     Courses: <BiBook className="wd-icon" />,

@@ -1,6 +1,10 @@
 import { React, useState, useEffect } from "react";
 import KanbasNavigation from "./KanbasNavigation";
 import Dashboard from "./Dashboard";
+import Signin from "./users/signin";
+import Account from "./users/account";
+import UserTable from "./users/table";
+import Signup from "./users/signup";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Courses from "./Courses";
 import store from "./store";
@@ -10,7 +14,6 @@ import "./index.css";
 const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Kanbas() {
-
   const [courses, setCourses] = useState([]);
   const URL = `${API_BASE}/courses`;
   const findAllCourses = async () => {
@@ -27,7 +30,7 @@ function Kanbas() {
 
   const addNewCourse = async () => {
     const response = await axios.post(URL, course);
-    setCourses([...courses, response.data ]);
+    setCourses([...courses, response.data]);
   };
 
   const deleteCourse = async (courseId) => {
@@ -58,8 +61,12 @@ function Kanbas() {
         <KanbasNavigation />
         <div className="page-content">
           <Routes>
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/admin/users" element={<UserTable />} />
+            <Route path="Account" element={<Account />} />
+            <Route path="/Account/:id" element={<Account />} />
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
             <Route
               path="Dashboard"
               element={

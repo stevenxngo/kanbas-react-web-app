@@ -3,7 +3,7 @@
   background: black;
   width: 85px !important;
   min-height: max(100vh, 100%);
-  position: fixed !important;
+  /* position: fixed !important; */
 }
 
 .wd-kanbas-navigation .list-group-item {

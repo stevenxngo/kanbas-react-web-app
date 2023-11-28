@@ -1,7 +1,9 @@
 .page-content {
   margin: 10px;
-  margin-left: 85px;
-  width: calc(100% - 145px);
+  margin-left: 0px;
+  /* margin-left: 85px; */
+  /* width: calc(100% - 145px); */
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
