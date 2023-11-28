@@ -10,10 +10,8 @@ import "./index.css";
 const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Kanbas() {
-  // const [courses, setCourses] = useState(db.courses);
 
   const [courses, setCourses] = useState([]);
-  // const URL = "http://localhost:4000/api/courses";
   const URL = `${API_BASE}/courses`;
   const findAllCourses = async () => {
     const response = await axios.get(URL);
@@ -42,7 +40,6 @@ function Kanbas() {
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
-          // return response.data;
           return course;
         } else {
           return c;

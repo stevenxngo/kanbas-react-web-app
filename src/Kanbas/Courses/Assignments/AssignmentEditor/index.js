@@ -52,8 +52,6 @@ function AssignmentEditor() {
   );
   const [availableTo, setAvailableTo] = useState(assignment.availableUntilDate);
 
-  // console.log(assignment);
-
   return (
     <div className="row mt-4 ms-1">
       <CourseNavigation className="col-3" />

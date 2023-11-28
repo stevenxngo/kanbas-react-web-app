@@ -8,37 +8,58 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import "./index.css";
 
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help"];
+  const links = [
+    "Account",
+    "Dashboard",
+    "Courses",
+    "Calendar",
+    "Inbox",
+    "History",
+    "Studio",
+    "Commons",
+    "Help",
+  ];
   const linksToIconsMap = {
-    "Account": <BiUserCircle className="wd-icon" />,
-    "Dashboard": <TfiDashboard className="wd-icon" />,
-    "Courses": <BiBook className="wd-icon" />,
-    "Calendar": <BiCalendar className="wd-icon" />,
-    "Inbox": <SlEnvolopeLetter className="wd-icon" />,
-    "History": <SlClock className="wd-icon" />,
-    "Studio": <TbPresentationAnalytics className="wd-icon" />,
-    "Commons": <IoArrowForwardCircleOutline className="wd-icon" />,
-    "Help": <AiOutlineQuestionCircle className="wd-icon" />,
-}
+    Account: <BiUserCircle className="wd-icon" />,
+    Dashboard: <TfiDashboard className="wd-icon" />,
+    Courses: <BiBook className="wd-icon" />,
+    Calendar: <BiCalendar className="wd-icon" />,
+    Inbox: <SlEnvolopeLetter className="wd-icon" />,
+    History: <SlClock className="wd-icon" />,
+    Studio: <TbPresentationAnalytics className="wd-icon" />,
+    Commons: <IoArrowForwardCircleOutline className="wd-icon" />,
+    Help: <AiOutlineQuestionCircle className="wd-icon" />,
+  };
 
   const { pathname } = useLocation();
   return (
     <div className="wd-kanbas-navbar">
-        <div className="list-group wd-kanbas-navigation" style={{ width: 150 }}>
-            <Link key={9} to='/Kanbas/Dashboard' className='list-group-item d-flex flex-column neu-icon'>
-                <img className="img-fluid" src={require("../Images/neu.png")} alt="NU Logo" />
-            </Link>
-            {links.map((link, index) => (
-                <Link
-                    key={index}
-                    to={`/Kanbas/${link}`}
-                    className={`list-group-item ${pathname.includes(link) && "active"} d-flex flex-column`}>
-                    {linksToIconsMap[link]}
-                    {link}
-                </Link>
-            ))}
-        </div>
+      <div className="list-group wd-kanbas-navigation" style={{ width: 150 }}>
+        <Link
+          key={9}
+          to="/Kanbas/Dashboard"
+          className="list-group-item d-flex flex-column neu-icon"
+        >
+          <img
+            className="img-fluid"
+            src={require("../Images/neu.png")}
+            alt="NU Logo"
+          />
+        </Link>
+        {links.map((link, index) => (
+          <Link
+            key={index}
+            to={`/Kanbas/${link}`}
+            className={`list-group-item ${
+              pathname.includes(link) && "active"
+            } d-flex flex-column`}
+          >
+            {linksToIconsMap[link]}
+            {link}
+          </Link>
+        ))}
+      </div>
     </div>
-);
+  );
 }
 export default KanbasNavigation;

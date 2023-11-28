@@ -13,10 +13,6 @@ const modulesSlice = createSlice({
       state.modules = action.payload;
     },
     addModule: (state, action) => {
-      // state.modules = [
-      //   { ...action.payload, _id: new Date().getTime().toString() },
-      //   ...state.modules,
-      // ];
       state.modules = [...state.modules, action.payload];
     },
     deleteModule: (state, action) => {

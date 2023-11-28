@@ -14,7 +14,6 @@ function Courses({ courses }) {
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
 
-  // const URL = "http://localhost:4000/api/courses";
   const URL = `${API_BASE}/courses`;
   const findCourseById = async (courseId) => {
     const response = await axios.get(`${URL}/${courseId}`);
@@ -29,7 +28,6 @@ function Courses({ courses }) {
   const currentURL = location.pathname;
   const urlSegments = currentURL.split("/");
   const lastSegment = urlSegments[urlSegments.length - 1];
-  // console.log(urlSegments);
 
   return (
     <div>

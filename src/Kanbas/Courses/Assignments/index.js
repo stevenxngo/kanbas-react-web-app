@@ -6,12 +6,8 @@ import AssignmentList from "./AssignmentList";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import * as client from "./client";
-import {
-  setAssignment,
-  setAssignments,
-} from "./assignmentsReducer";
+import { setAssignment, setAssignments } from "./assignmentsReducer";
 import "./index.css";
-// import "../index.css";
 
 function Assignments() {
   const { courseId } = useParams();

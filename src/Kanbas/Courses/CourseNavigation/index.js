@@ -13,12 +13,8 @@ function CourseNavigation() {
   ];
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  // const course = db.courses.find((course) => course._id === courseId);
   return (
     <div className="course-nav ms-4">
-      {/* <div className="course-name">
-        {course.number} {course.name} {course.startDate}
-      </div> */}
       <div className="list-group">
         {links.map((link, index) => (
           <Link

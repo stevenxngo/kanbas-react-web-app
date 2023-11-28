@@ -20,7 +20,6 @@ function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
-  // console.log(module);
   const dispatch = useDispatch();
 
   const handleAddModule = () => {
