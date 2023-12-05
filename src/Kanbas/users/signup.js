@@ -11,6 +11,7 @@ function Signup() {
   const signup = async () => {
     try {
       await client.signup(credentials);
+      setError("");
       navigate("/Kanbas/Account");
     } catch (err) {
       setError(err.response.data.message);
