@@ -2,18 +2,25 @@ import * as client from "./client";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Signin() {
+  const [error, setError] = useState("");
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
   const navigate = useNavigate();
   const signin = async () => {
-    await client.signin(credentials);
-    navigate("/Kanbas/Account");
+    try {
+      await client.signin(credentials);
+      setError("");
+      navigate("/Kanbas/Account");
+    } catch (err) {
+      setError(err.response.data.message);
+    }
   };
   return (
     <div className="w-50 ms-5 mt-2 me-5">
       <h1>Signin</h1>
+      {error && <div>{error}</div>}
       <input
         value={credentials.username}
         className="form-control mb-3"
